@@ -7,7 +7,7 @@ const App = () => {
   return (
     <ThemeProvider>
       <div className="flex flex-col">
-        <main className="w-full h-screen flex flex-col items-center justify-center bg-background text-secondary-foreground">
+        <main className="w-full h-screen flex flex-col items-center justify-center bg-foreground text-secondary-foreground">
           <ModeToggle />
 
           <div
