@@ -1,6 +1,11 @@
 import { Github } from "lucide-react";
 
-const Display = () => {
+interface DisplayProps {
+  display: string;
+  result: string;
+}
+
+const Display = ({ display, result }: DisplayProps) => {
   return (
     <section
       id="display"
@@ -8,7 +13,7 @@ const Display = () => {
     >
       <form
         action=""
-        className="w-full h-10/12 flex flex-col items-end justify-"
+        className="w-full h-10/12 mx-auto flex flex-col items-end justify-"
       >
         <input
           dir="rtl"
@@ -16,10 +21,11 @@ const Display = () => {
           name="display"
           id="display"
           placeholder="0"
+          value={display}
           className=" m-0 w-11/12 h-1/2 text-9xl text-black placeholder:text-card"
         />
-        <div id="to" className="pr-2.5 text-5xl">
-          0
+        <div id="to" className="pr-2.5 text-5xl text-card">
+          {result}
         </div>
       </form>
       <div className="github w-full h-2/12 flex justify-end items-center pb-2.5">
@@ -33,7 +39,7 @@ const Display = () => {
               fill="none"
               viewBox="0 0 24 24"
               size={40}
-              className="w-12 hover:scale-110 text-background duration-200 text-4xl  hover:stroke-primary"
+              className="w-12 hover:scale-110 text-background duration-200 text-4xl hover:stroke-primary"
             />
           </a>
         </button>
