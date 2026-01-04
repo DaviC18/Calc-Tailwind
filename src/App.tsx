@@ -1,7 +1,7 @@
 import "./App.css";
 import { ThemeProvider } from "./components/theme-provider";
 import { ModeToggle } from "./components/mode-toggle";
-import Calculator from "./lib/Calculator";
+import Calculator from "./components/Calculator";
 
 const App = () => {
   return (
